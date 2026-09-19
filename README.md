@@ -32,6 +32,12 @@ logs/quicklaunch.log
 # 截图
 ![运行截图](Picture/Main_White.png)
 
+![运行截图](Picture/Setting_White.png)
+
+![运行截图](Picture/Main_Dark.png)
+
+![运行截图](Picture/Setting_Dark.png)
+
 # QuickLaunch 功能
 
 快捷键呼出的应用启动器：常用程序集中到一个面板，打字就能找、回车就能开。
