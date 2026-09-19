@@ -1,13 +1,6 @@
 # QuickLaunch
 
-Windows 11 风格的自定义快速启动面板，用于替代开始菜单/桌面快捷方式。
-
-## 功能
-
-将选择文件夹中的文件
-
-
-
+Windows 11 风格的自定义快速启动面板，用于替代开始菜单/桌面快捷方式。（项目由AI创作）
 
 ### 使用
 
@@ -37,7 +30,7 @@ cache/icons/*.png
 logs/quicklaunch.log
 ```
 
-# QuickLaunch 功能总结
+# QuickLaunch 功能
 
 快捷键呼出的应用启动器：常用程序集中到一个面板，打字就能找、回车就能开。
 
