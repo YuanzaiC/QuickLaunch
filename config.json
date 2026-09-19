@@ -1,0 +1,20 @@
+{
+  "scanFolders": [
+    "C:\\Users\\Public\\Desktop",
+    "D:\\Tools"
+  ],
+  "recursive": true,
+  "maxDepth": 3,
+  "includeExtensions": [
+    ".exe",
+    ".lnk"
+  ],
+  "excludeFolders": [
+    "node_modules",
+    "$Recycle.Bin"
+  ],
+  "hotkey": "Alt+Space",
+  "theme": "system",
+  "startWithWindows": false,
+  "maxRecent": 30
+}

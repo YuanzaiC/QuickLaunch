@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>QuickLaunch</AssemblyName>
+    <RootNamespace>QuickLaunch</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- exe 自身的图标（资源管理器、任务栏、Alt+Tab 都用它） -->
+    <ApplicationIcon>Assets\QuickLaunch.ico</ApplicationIcon>
+    <Platforms>AnyCPU</Platforms>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      UseWindowsForms 会隐式引入 using System.Drawing / System.Windows.Forms，
+      与 WPF 的同名类型（TextBox、ComboBox、Point、Brush……）冲突。
+      项目里 WinForms 的用法都带完整命名空间，因此直接移除这两个隐式 using。
+    -->
+    <Using Remove="System.Drawing" />
+    <Using Remove="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Net-Pinyin" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json" CopyToOutputDirectory="PreserveNewest" />
+    <Resource Include="Assets\default-icon.png" />
+    <!-- 窗口 / 对话框图标：WPF 解码 PNG 最稳，直接用 256 尺寸那一份 -->
+    <Resource Include="Assets\QuickLaunch.png" />
+    <!-- 多尺寸 ico（16~64 为 DIB，128/256 为 PNG）：exe 图标与托盘图标共用，需要复制到输出目录 -->
+    <Content Include="Assets\QuickLaunch.ico" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

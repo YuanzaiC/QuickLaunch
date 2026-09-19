@@ -1,0 +1,23 @@
+<Application x:Class="QuickLaunch.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:QuickLaunch"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Tokens.xaml" />
+                <ResourceDictionary Source="Themes/Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:BooleanToVisibilityConverter2 x:Key="BooleanToVisibility" />
+            <local:BooleanToWarningConverter x:Key="BooleanToWarning" />
+            <local:BoolToChevronConverter x:Key="BoolToChevron" />
+            <local:CountToVisibilityConverter x:Key="CountToVisibility" />
+            <local:TextToVisibilityConverter x:Key="TextToVisibility" />
+
+            <!-- 程序图标：窗口、Alt+Tab 与对话框统一用这一份（exe 与托盘图标用 Assets\QuickLaunch.ico） -->
+            <BitmapImage x:Key="AppIcon" UriSource="/Assets/QuickLaunch.png" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
