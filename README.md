@@ -29,6 +29,8 @@ catalog.cache.json
 cache/icons/*.png
 logs/quicklaunch.log
 ```
+# 截图
+![运行截图](Picture/Main_White.png)
 
 # QuickLaunch 功能
 
